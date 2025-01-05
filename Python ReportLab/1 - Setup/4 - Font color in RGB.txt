@@ -1,0 +1,18 @@
+import os
+import random
+from reportlab.pdfgen import canvas
+
+# PDF File Path
+# 239.pdf
+PDF_FILE_PATH = os.getcwd() + '\pdf\\' + str(random.randint(1, 10000)) + ".pdf"
+
+pdf_canvas = canvas.Canvas(PDF_FILE_PATH)
+
+# Font color in CMYK
+pdf_canvas.setFillColorRGB(0, 0, 1)
+
+pdf_canvas.drawString(200,200,'Hello PDF')
+
+pdf_canvas.showPage()
+
+pdf_canvas.save()
