@@ -1,0 +1,35 @@
+Certainly! You can use the `os` module in Python to list the folders in a directory and then write the folder names to a text file. Here's a simple script for that:
+
+```python
+import os
+
+def write_folder_names_to_txt(directory_path, output_file_path):
+    try:
+        # Get a list of folder names in the specified directory
+        folder_names = [folder for folder in os.listdir(directory_path) if os.path.isdir(os.path.join(directory_path, folder))]
+
+        # Write the folder names to a text file
+        with open(output_file_path, 'w') as output_file:
+            for folder_name in folder_names:
+                output_file.write(folder_name + '\n')
+
+        print(f"Folder names written to {output_file_path} successfully.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Replace 'path/to/your/directory' with the path of the directory you want to scan
+directory_path = 'path/to/your/directory'
+
+# Replace 'output.txt' with the desired name for the output text file
+output_file_path = 'output.txt'
+
+# Call the function with the specified directory and output file paths
+write_folder_names_to_txt(directory_path, output_file_path)
+```
+
+Make sure to replace the `'path/to/your/directory'` with the actual path of the directory you want to scan, and `'output.txt'` with the desired name for the output text file.
+
+This script uses the `os.listdir` method to get a list of all items in the specified directory, and then filters out only the folders using `os.path.isdir`. The folder names are then written to the specified text file line by line.
+
+Remember to handle file paths carefully and make sure you have the necessary permissions to read from the directory and write to the text file.

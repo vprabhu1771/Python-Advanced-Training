@@ -1,0 +1,23 @@
+To get the current username in Python, you can use the `getpass` module or the `os` module. Here are two examples:
+
+### Using `getpass` module:
+
+```python
+import getpass
+
+username = getpass.getuser()
+print("Current username:", username)
+```
+
+### Using `os` module:
+
+```python
+import os
+
+username = os.getlogin()
+print("Current username:", username)
+```
+
+Note that the `getpass.getuser()` function may not work as expected in all environments, especially if the username is not set or if the program is running with elevated privileges. The `os.getlogin()` function attempts to get the login name associated with the controlling terminal, which might be more reliable in some cases.
+
+Choose the method that best suits your requirements based on the context in which you are using it.

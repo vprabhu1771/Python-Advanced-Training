@@ -1,0 +1,18 @@
+To convert the given code using the `subprocess` module, you can use `subprocess.run` to execute the `copy` command. Here's the modified code:
+
+```python
+import subprocess
+from getpass import getuser
+import os
+
+user_name = getuser()
+
+startup = 'C:\\Users\\{}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'.format(user_name)
+
+# Use subprocess.run to execute the copy command
+subprocess.run(["copy", __file__, startup], shell=True)
+
+print("\a")
+```
+
+In this code snippet, `subprocess.run` is used to execute the `copy` command. The `shell=True` parameter is set to allow the use of shell commands. Note that `shell=True` can introduce security risks if the `__file__` variable contains user input, as it may lead to shell injection vulnerabilities. If you're working with user input, it's recommended to validate and sanitize the input before using it in a command.

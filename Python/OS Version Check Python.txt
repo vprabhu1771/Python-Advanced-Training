@@ -1,0 +1,19 @@
+If you want to determine the operating system version using Python, you can use the `platform` module. Here's an example:
+
+```python
+import platform
+
+# Get the operating system name
+os_name = platform.system()
+
+# Get the operating system version
+os_version = platform.version()
+
+# Print the results
+print(f"Operating System: {os_name}")
+print(f"Operating System Version: {os_version}")
+```
+
+This will print information about the operating system, such as "Windows" for Windows operating systems, and a version string specific to the operating system.
+
+Please note that the version information might not be very detailed or might not provide exactly what you're looking for, especially if you want to specifically identify Windows 10 or a similar version. In that case, you might need to use additional methods or libraries, such as the `platform.win32_ver()` function, to get more detailed information on Windows systems.

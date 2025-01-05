@@ -1,0 +1,20 @@
+Certainly! If you want each year to be enclosed in parentheses and separated by a comma, you can modify the code as follows:
+
+```python
+# Create a tuple containing the years from 1900 to 2023
+years_tuple = tuple(range(1900, 2024))
+
+# Format the tuple elements as strings with parentheses and commas
+formatted_years = ",".join(f"({year})" for year in years_tuple)
+
+# Specify the file name
+file_name = "output.txt"
+
+# Write the formatted string to the file
+with open(file_name, "w") as file:
+    file.write(formatted_years)
+
+print(f"Formatted tuple exported to {file_name}")
+```
+
+In this code, the `formatted_years` line uses a generator expression to format each year as a string with parentheses, and the `join` method joins these strings with commas. The rest of the code is similar to the previous example. This will result in a file containing a string like `(1900),(1901),(1902),...(2022),(2023)`.

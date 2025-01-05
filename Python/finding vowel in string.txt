@@ -1,0 +1,19 @@
+Finding the numbers of vowel in string:
+
+
+
+try:
+
+    x = input("enter the value : ")
+    vowels_count = 0
+    vowels = []
+    for element in x:
+        if (element == "a" or element == "e" or element == "i" or element == "o" or element == "u" ):
+            vowels.append(element)
+            vowels_count += 1
+
+    print("Vowels ", vowels)
+    print("Vowels Count ", vowels_count)
+
+except ValueError:
+    print("enter the proper input")

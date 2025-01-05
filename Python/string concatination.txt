@@ -1,0 +1,9 @@
+string1 = "siva"
+string2 = "bala"
+
+# Ensure both strings are of the same length
+if len(string1) != len(string2):
+    print("Both strings must have the same length.")
+else:
+    for char1, char2 in zip(string1, string2):
+        print(char1 + char2)

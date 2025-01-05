@@ -1,0 +1,24 @@
+from getpass import getuser
+import os
+
+user_name = getuser()
+
+startup = 'C:\\Users\\{}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'.format(user_name)
+
+os.system("copy {} {}".format(__file__, startup))
+
+print("\a")
+
+OR
+
+import shutil
+from getpass import getuser
+import os
+
+user_name = getuser()
+
+startup = 'C:\\Users\\{}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'.format(user_name)
+
+shutil.copy(__file__, startup)
+
+print("\a")

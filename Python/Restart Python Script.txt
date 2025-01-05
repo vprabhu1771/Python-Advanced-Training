@@ -1,0 +1,19 @@
+If you want to restart the Python script itself using the `os.system` function, you can use the `sys.executable` attribute from the `sys` module to get the path of the Python interpreter. Here's an example:
+
+```python
+import os
+import sys
+
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+
+# Your main program code here
+
+# Example: Restart the program
+restart_program()
+```
+
+This code defines a function `restart_program` that gets the path to the Python interpreter and then uses `os.execl` to replace the current process with a new instance of the Python interpreter running the same script.
+
+Remember, restarting a script might not always be the best approach, and it's generally better to structure your code in a way that avoids the need for a complete restart. Consider using functions or classes to encapsulate different parts of your program logic and handle state appropriately.

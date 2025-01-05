@@ -1,0 +1,27 @@
+
+class OwnError(Exception):
+    pass
+
+class CommonPasswordError(Exception):
+    pass
+
+try:
+    x=int(input("Enter x value\n"))
+
+    if x == 0:
+        raise OwnError
+
+    elif x == 123 or x == 321:
+        raise CommonPasswordError
+
+    else:
+        print("number is accepted")
+
+except OwnError:
+    print("Value is zero")
+
+except CommonPasswordError:
+    print("Password is Common Pattern")
+
+
+

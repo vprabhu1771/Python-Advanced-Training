@@ -1,0 +1,12 @@
+import datetime
+
+today = datetime.date.today()
+
+current_time = datetime.datetime.now().strftime("%H-%M-%S")
+
+file_name = "{} {}.txt".format(today, current_time)
+
+with open(file_name, mode='w', encoding='utf-8') as songs:
+    songs.write("as\n")
+    songs.write("sd\n")
+    songs.write("qw\n")

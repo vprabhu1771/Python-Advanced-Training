@@ -1,0 +1,16 @@
+data = [
+    {"code": "MTQ", "name": "Martinique"},
+    # Add more entries if needed
+]
+
+# Specify the file path where you want to save the data
+file_path = "output.txt"
+
+# Open the file in write mode
+with open(file_path, "w") as file:
+    # Iterate through the data and write each entry as a tuple to the file
+    for entry in data:
+        tuple_str = f"('{entry['code']}', '{entry['name']}')\n"
+        file.write(tuple_str)
+
+print(f"Data exported to {file_path}")
