@@ -1,0 +1,50 @@
+1) Open Run Window
+
+Start + R
+
+
+2) Open Command Prompt
+
+cmd
+
+
+3) Go to Desktop
+
+cd Desktop
+
+
+4) Create Project Folder and Go to Project Folder
+
+mkdir project_name
+
+cd project_name
+
+
+5) Open VSCode
+
+code .
+
+
+6) Create Python File
+
+File -> New
+
+or
+
+CTRL + N
+
+
+7) Save Python File
+
+File -> Save
+
+or 
+
+CTRL + S
+
+For EG: app.py
+
+
+8) Run Python Code
+
+python app.py

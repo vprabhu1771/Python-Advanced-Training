@@ -1,0 +1,6 @@
+x = 1.1
+
+print(type(x))
+
+OUTPUT
+<class 'float'>

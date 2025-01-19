@@ -1,0 +1,6 @@
+x = "abcd"
+
+print(type(x))
+
+OUTPUT
+<class 'str'>
