@@ -1,0 +1,18 @@
+try:
+    num = int(input("Enter a number: "))
+
+    if (num % 2) == 0:
+       print("{0} is Even".format(num))
+    else:
+       print("{0} is Odd".format(num))
+
+except ValueError:
+    print("Please Integer Only")
+
+OUTPUT
+
+Enter a number: 2
+2 is Even
+
+Enter a number: 3
+3 is Odd

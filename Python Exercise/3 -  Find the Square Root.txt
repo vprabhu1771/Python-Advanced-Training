@@ -1,0 +1,68 @@
+Python
+
+num = 8
+
+num_sqrt = num ** 0.5
+
+print('The square root of %0.3f is %0.3f' %(num ,num_sqrt))
+
+
+C:
+
+#include <stdio.h>
+#include <math.h>
+#include <conio.h>
+
+vod main() {
+
+    double num = 8;
+
+    double num_sqrt = sqrt(num);
+    
+    clrscr();
+
+    printf("The square root of %.3f is %.3f\n", num, num_sqrt);
+
+    getch();
+}
+
+
+C++:
+
+#include <iostream>
+#include <cmath>
+#include <conio.h>
+
+void main() {
+
+    double num = 8;
+
+    double num_sqrt = sqrt(num);
+
+    clrscr();
+
+    cout << "The square root of " << num << " is " << num_sqrt <<endl;
+
+    getch();
+}
+
+
+Java:
+
+public class App {
+
+    public static void main(String[] args) {
+
+        double num = 8;
+
+        double num_sqrt = Math.sqrt(num);
+
+        System.out.printf("The square root of %.3f is %.3f%n", num, num_sqrt);
+
+    }
+}
+
+
+OUTPUT
+
+The square root of 8.000 is 2.828
